@@ -1,5 +1,6 @@
 .my-cart {
     margin-top: 9rem;
+    margin-bottom: 5rem;
     .cart {
         display: grid;
         grid-template-columns: 1fr;
@@ -109,7 +110,8 @@
                 }
             }
             .return-shopping {
-                margin-top: 2rem;
+                margin-top: 1.5rem;
+                margin-bottom: 2.5rem;
                 text-align: center;
                 a {
                     text-decoration: underline;
@@ -224,6 +226,7 @@
 
     @media (min-width: 768px) {
         margin-top: 17rem;
+        margin-bottom: 0;
         .cart {
             .cart-items {
                 .product-cart {

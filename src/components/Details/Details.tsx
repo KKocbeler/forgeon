@@ -91,7 +91,7 @@ const Details = () => {
 
     return (
         <>
-        <div className="details container">
+        <div className="details">
             <DetailBreadcrumb name={selectedProduct?.name} />
             <div className="details-body">
                 <DetailGallery images={selectedProduct?.images || []}/>

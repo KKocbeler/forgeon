@@ -18,7 +18,7 @@ const DetailBreadcrumb = ({name}: PropsType) => {
             </div>
             <HiOutlineChevronRight />
             <div className={styles["link-box"]}>
-                <Link to={"/products"}>{name}s</Link>
+                <Link to={"/products"}>{name}</Link>
             </div>
         </div>
     )

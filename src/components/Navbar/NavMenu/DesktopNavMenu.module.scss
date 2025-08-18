@@ -1,13 +1,15 @@
 .nav-menu {
     display: none;
+
     @media (min-width: 768px) {
         display: flex;
         justify-content: center;
         flex: 3;
         &.scrolled {
             .nav-menu-list {
-                gap: 3rem;
+                gap: 2rem;
                 ul {
+                    gap: 2rem;
                     li {
                         a {
                             font-size: 1.6rem;
@@ -17,8 +19,7 @@
 
                 .middle-logo {
                     img {
-                        width: 8rem; height: 8rem;
-                        margin: 0 2rem;
+                        width: 7rem; height: 7rem;
                     }
                 }
             }
@@ -26,21 +27,21 @@
         .nav-menu-list {
             display: flex;
             align-items: center;
-            gap: 4rem;
-
+            gap: 3rem;
+            transition: all .7s linear;
             .first-list {
                 display: flex;
                 justify-content: right;
-                gap: 4rem;
             }
 
             .second-list {
                 display: flex;
-                gap: 4rem;
             }
             .first-list,
             .second-list {
+                transition: all .7s linear;
                 min-width: 20rem;
+                gap: 3rem;
                 li {
                     position: relative;
 
@@ -52,7 +53,7 @@
                         height: 0.2rem;
                         width: 100%;
                         background-color: var(--secondary-color);
-                        transition: all 0.3s ease;
+                        transition: all 0.3s linear;
                         transform: scale(0);
                         transform-origin: middle;
                         border-radius: 50%;
@@ -64,15 +65,44 @@
                     a {
                         color: var(--secondary-color);
                         font-size: 1.7rem;
-                        transition: all .7s ease;
+                        transition: all .7s linear;
                     }
                 }
             }
             .middle-logo {
+                img {
+                    width: 8rem; height: 8rem;
+                    transition: all .7s linear;
+                }
+            }
+        } 
+    }
 
+    @media (min-width: 1024px) {
+        &.scrolled {
+            .nav-menu-list {
+                gap: 4rem;
+                ul {
+                    gap: 4rem;
+                }
+
+                .middle-logo {
+                    img {
+                        width: 8rem; height: 8rem;
+                    }
+                }
+            }
+        }
+        .nav-menu-list {
+            gap: 4rem;
+            .first-list,
+            .second-list {
+                gap: 4rem;
+            }
+            .middle-logo {
                 img {
                     width: 10rem; height: 10rem;
-                    transition: all .7s ease;
+                    transition: all .7s linear;
                 }
             }
         } 
