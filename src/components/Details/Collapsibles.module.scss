@@ -1,0 +1,33 @@
+.collapsibles {
+    margin-top: 3rem;
+    .collapsible-cart {
+        border-bottom: .1rem solid var(--text-gray);
+
+        &:first-child {
+            border-top: .1rem solid var(--text-gray);
+        }
+        .collapsible-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            font-weight: 700;
+            svg {
+                width: 2.2rem; height: 2.2rem;
+            }
+        }
+
+        .content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all .3s;
+            
+            &.show {
+                max-height: 300px;
+                opacity: 1;
+                padding: 1rem 0 2rem 0;
+            }
+        }
+    }
+}

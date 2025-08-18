@@ -1,0 +1,105 @@
+.profile-info {
+    header {
+        margin-bottom: 3rem;
+        h1 {
+            font-size: 2.2rem;
+        }
+    }
+    main {
+        margin-top: 3rem;
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+
+            .input-box {
+                position: relative;
+
+                label {
+                    position: absolute;
+                    top: 50%;
+                    left: 1rem;
+                    transform: translateY(-50%);
+                    background-color: #fff;
+                    font-size: 1.5rem;
+                    color: var(--text-dark);
+                    transition: all 0.3s ease;
+                    pointer-events: none;
+                    padding: 0 0.5rem;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 1.3rem;
+                    border: 0.1rem solid var(--primary-color);
+                    border-radius: .8rem;
+                    outline: none;
+                    font-size: 1.6rem;
+                    background: transparent;
+
+                    &:focus ~ label,
+                    &:valid ~ label {
+                        font-size: 1.2rem;
+                        top: 0;
+                        color: var(--primary-color);
+                    }
+                }
+            }
+
+            .radio-box {
+                padding-left: 1rem;
+                .label-title {
+                    font-size: 1.5rem;
+                    color: var(--primary-color);
+                }
+
+                .label-body {
+                    display: flex;
+                    align-items: center;
+                    gap: 5rem;
+                    margin-top: 1rem;
+
+                    label {
+                        display: flex;
+                        align-items: center;
+                        gap: .8rem;
+
+                        input[type="radio"] {
+                            accent-color: var(--primary-color); // modern tarayıcılarda radio rengini değiştirir
+                            cursor: pointer;
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+            }
+            
+            button {
+                padding: 1.7rem 0;
+                border-radius: .8rem;
+                transition: opacity .2s linear;
+                &:hover {
+                    opacity: .95;
+                }
+                &[type="button"] {
+                    background-color: var(--text-gray);
+                    color: var(--text-light);
+                }
+
+                &[type="submit"] {
+                    background-color: var(--primary-color);
+                    color: var(--text-light);
+                }
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        main {
+            form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+    }
+}

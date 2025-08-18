@@ -1,0 +1,115 @@
+.detail-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-height: 70rem;
+
+  .small-slider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    order: 2;
+    margin-bottom: 3rem;
+
+    .direction {
+      padding: .5rem;
+      cursor: pointer;
+
+      svg {
+        color: var(--primary-color);
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .swiper {
+      width: 100%;
+      height: auto;
+
+      .swiper-wrapper {
+        width: 30rem;
+
+        .swiper-slide {
+          img {
+            cursor: pointer;
+            display: block;
+            width: 8rem;
+            height: 8rem;
+            object-fit: cover;
+            border: .1rem solid transparent;
+            border-radius: .4rem;
+            transition: all .3s ease;
+            padding: 0 .5rem;
+
+            &.active {
+              border: .1rem solid var(--primary-color);
+            }
+
+            &:hover {
+              border: .1rem solid var(--text-dark);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .big-slider {
+    padding: 2rem;
+    max-height: 30rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .small-slider {
+      .swiper {
+        .swiper-wrapper {
+          width: 55rem;
+
+          .swiper-slide {
+            img {
+              width: 10rem;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    position: sticky;
+    top: 10rem;
+    grid-template-columns: auto 1fr;
+
+    .small-slider {
+      gap: 2rem;
+      flex-direction: column;
+      order: 0;
+
+      .swiper {
+        .swiper-wrapper {
+          width: 8rem;
+          height: 55rem;
+
+          .swiper-slide {
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .big-slider {
+      max-height: 70rem;
+    }
+  }
+}

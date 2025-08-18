@@ -1,0 +1,116 @@
+.register-page {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 99999;
+    width: 100%; height: 100vh;
+    background-color: var(--text-light);
+
+    .register-body {
+        width: 100%;
+        max-width: 550px;
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-top: 7rem;
+
+        .logo {
+            text-align: center;
+            margin-bottom: 3rem;
+            img {
+                width: 8rem; height: 8rem;
+                object-fit: cover;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+            .input-box {
+                position: relative;
+                &:nth-child(3) {
+                    grid-column: 1 / 3;
+                }
+
+                &:nth-child(6) {
+                    grid-column: 1 / 3;
+                    display: flex;
+                    align-items: start;
+                    gap: .5rem;
+                    label {
+                        font-size: 1.3rem;
+                         
+                        a {
+                            text-decoration: underline;
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+
+                label {
+                    display: block;
+                    font-size:1.5rem;
+                    margin-bottom: .5rem;
+                }
+                input {
+                    color: var(--primary-color);
+                    border-radius: .5rem;
+                    padding: .7rem;
+                    border: .1rem solid var(--text-gray);
+                    font-size: 1.6rem;
+                    outline-color: var(--primary-color);
+                }
+                input:not([type="checkbox"]) {
+                    width: 100%;
+                }
+
+                .password-toggle {
+                    position: absolute;
+                    top: 52%; right: 1rem;
+                    svg {
+                        color: var(--primary-color);
+                        width: 2rem; height: 2rem;
+                    }
+                }
+            }
+
+            button {
+                grid-column: 1 / 3;
+                padding: 1.2rem;
+                background-color: var(--primary-color);
+                color: var(--text-light);
+                border-radius: .7rem;
+                width: 100%;
+            }
+
+            p {
+                grid-column: 1 / 3;
+                font-size: 1.4rem;
+                text-align: center;
+
+                a {
+                    text-decoration: underline;
+                    color: var(--primary-color);
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: 576px) {
+
+    justify-content: center;
+    align-items: center;
+    .register-body {
+        border: .1rem solid var(--primary-color);
+        padding: 2rem 3rem;
+    }
+}
+}

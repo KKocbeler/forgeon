@@ -1,0 +1,86 @@
+.details {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+
+    .details-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 3rem;
+
+        .detail-box {
+            position: relative;
+
+            .name {
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            .price {
+                margin-bottom: 2rem;
+            }
+
+            .buttons {
+                .button-add {
+                    width: 100%;
+                    background-color: var(--text-dark);
+                    border-radius: 5rem;
+                    text-align: center;
+                    color: var(--text-light);
+                    padding: 1.2rem 0;
+                    transition: all .3s ease;
+                    transform: scale(1);
+                    font-size: 1.6rem;
+
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+
+            .favorite {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 1rem;
+                border-radius: 50%;
+
+                &.show {
+                    background-color: rgba(36, 28, 21, 0.2);
+                }
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .details {
+        margin-top: 15rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .details {
+        margin-top: 16rem;
+    }
+
+    .details {
+        .details-body {
+            grid-template-columns: 5fr 2fr;
+            margin-top: 7rem;
+
+            .detail-box {
+                padding: 0 2rem;
+            }
+        }
+    }
+}

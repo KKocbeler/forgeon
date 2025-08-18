@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 55%;
+    font-family: "Roboto Flex", sans-serif;
+
+    @media (min-width: 992px) {
+      font-size: 62.5;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+:root {
+    --primary-color: #4B341A;
+    --secondary-color: #D7C198;
+    --third-color: #4B341A;
+    --text-light: #ffffff;
+    --text-dark: #0f0f0f;
+    --text-gray: #5e5e5e;
+    --bg-gray: #d1d1d1;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    line-height: 2rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 1.6rem;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 992px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1120px;
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 1400px;
+    }
+}
+

@@ -1,0 +1,80 @@
+.nav-menu {
+    display: none;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        flex: 3;
+        &.scrolled {
+            .nav-menu-list {
+                gap: 3rem;
+                ul {
+                    li {
+                        a {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+
+                .middle-logo {
+                    img {
+                        width: 8rem; height: 8rem;
+                        margin: 0 2rem;
+                    }
+                }
+            }
+        }
+        .nav-menu-list {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+
+            .first-list {
+                display: flex;
+                justify-content: right;
+                gap: 4rem;
+            }
+
+            .second-list {
+                display: flex;
+                gap: 4rem;
+            }
+            .first-list,
+            .second-list {
+                min-width: 20rem;
+                li {
+                    position: relative;
+
+                    &::after {
+                    content: "";
+                        position: absolute;
+                        bottom: -1rem;
+                        left: 0;
+                        height: 0.2rem;
+                        width: 100%;
+                        background-color: var(--secondary-color);
+                        transition: all 0.3s ease;
+                        transform: scale(0);
+                        transform-origin: middle;
+                        border-radius: 50%;
+                        z-index: 99;
+                    }
+                    &:hover::after {
+                        transform: scale(1);
+                    }
+                    a {
+                        color: var(--secondary-color);
+                        font-size: 1.7rem;
+                        transition: all .7s ease;
+                    }
+                }
+            }
+            .middle-logo {
+
+                img {
+                    width: 10rem; height: 10rem;
+                    transition: all .7s ease;
+                }
+            }
+        } 
+    }
+}

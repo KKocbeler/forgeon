@@ -1,0 +1,68 @@
+    .comments-section {
+        margin: 8rem 0;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+        .comment {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            border-radius: 1rem;
+            gap: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            .avatar {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -.5rem; right: 50%;
+                    width: .1rem; height: calc(100% - 4rem);
+                    background-color: var(--bg-gray);
+                }
+                img {
+                    width: 4rem; height: 4rem;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+
+            .comment-body {
+                width: 100%;
+
+                @media (min-width:768px) {
+                    width: 70%;
+                }
+                .comment-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .username {
+                        margin-bottom: 1rem;
+                        font-weight: 700;
+                        .created-at {
+                            font-size: 1.2rem;
+                            color: var(--text-gray);
+                            margin-left: 1rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .comment-message {
+                    font-size: 1.5rem;
+                }
+                .comment-actions {
+                    display: flex;
+                    gap: 1rem;
+                    font-size: 1.4rem;
+                    margin-top: 2rem;
+
+                    .vote {
+                        display: flex;
+                        align-items: center;
+                        gap: .54rem;
+                    }
+                }
+            }
+        }
+    }

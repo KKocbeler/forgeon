@@ -1,0 +1,34 @@
+.return-exchange {
+    margin-top: 17rem;
+    min-height: 80vh;
+    header {
+        h1 {
+            text-align: center;
+            font-size: 2.8rem
+        }
+    }
+
+    main {
+        padding: 1rem 2rem;
+
+        article {
+            margin: 2rem 0;
+            line-height: 1.6rem;
+
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: .8rem;
+                color: var(--dark-color);
+            }
+
+            p {
+                margin: .5rem 0;
+
+                a {
+                    text-decoration: underline;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,210 @@
+.side-cart {
+    position: fixed;
+    inset: 0;
+    width: 100vw ;height: 100vh;
+    background-color: transparent;
+    transition: all .3s ease;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    &.show {
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .body {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        inset: 0 0 0 20%;
+        height: 100vh;
+        background-color:var(--text-light);
+        transition: all .3s ease;
+        transform: translateX(100%);
+
+        @media (min-width: 576px) {
+            inset: 0 0 0 28%;  
+        }
+
+        @media (min-width: 768px) {
+            inset: 0 0 0 50%;  
+        }
+
+        @media (min-width: 992px) {
+            inset: 0 0 0 60%;
+        }
+
+        @media (min-width: 1200px) {
+            inset: 0 0 0 65%;
+        }
+
+        @media (min-width: 1430px) {
+            inset: 0 0 0 78%;
+        }
+
+        &.show {
+            transform: translate(0);
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .empty-sidecart {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+            svg {
+                width: 8rem; height: 8rem;
+            }
+
+            > p {
+                font-size: 1.7rem;
+                font-weight: 600;
+                margin: 2rem 0 4rem 0;
+            }
+
+            a {
+                padding: 1.5rem 5rem;
+                background-color: var(--text-dark);
+                border-radius: .8rem;
+                color: var(--text-light);
+            }
+        }
+
+        .cart {
+            padding: 0 2rem;
+            flex: 1;
+            overflow-y: auto;
+            .product {
+                position: relative;
+                display: flex;
+                gap: 2rem;
+                border-bottom: .1rem solid var(--text-gray);
+                margin-top: 2rem;
+                padding-bottom: 1.5rem;
+                .product-image {
+                    width: 8rem; height: 8rem;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .product-info {
+                    .product-name {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+                    .product-features {
+                        display: flex;
+                        flex-wrap: wrap;
+                        column-gap: 3rem;
+                        row-gap: .5rem;
+                        > div {
+                            font-size: 1.4rem;
+                            span {
+                                color: var(--text-gray);
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+
+                    .product-price {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .count {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            .piece {
+                                font-size: 1.4rem;
+                                color: var(--text-gray);
+                            }
+                            .product-quantity {
+                                display: flex;  
+                                align-items: center;
+                                gap: 1rem;
+                                .quantity-control {
+                                    background-color: transparent;
+                                    padding: .7rem;
+                                    svg {
+                                        width: .8rem; height: .8rem;
+                                    }
+                                }
+
+                                .quantity {
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                        .price {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                .delete-product {
+                    position: absolute;
+                    top: 0; right: 0;
+                    svg {
+                        width: 1.7rem; height: 1.7rem;
+                        color: var(--third-color);
+                    }
+                }
+            }
+        }
+
+        .total-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 8rem;
+            background-color: var(--text-dark);
+            padding: 0 2rem;
+            .total {
+                .text {
+                    color: var(--text-light);
+                    margin-bottom: .5rem;
+                }
+
+                .number {
+                    color: var(--text-light);
+                    font-weight: 900;
+                }
+            }
+
+            .to-cart {
+                a {
+                    transition: all .3s ease;
+                    background-color: var(--text-light);
+                    color: var(--text-dark);
+                    padding: 1.5rem 3rem;
+                    border: .1rem solid var(--text-light);
+                    border-radius: .8rem;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+
+                    &:hover {
+                        background-color: var(--text-dark);
+                        border-color: var(--text-light);
+                        color: var(--text-light);
+                    }
+                }
+            }
+        }
+
+        .close-cart {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem 1rem 0 0;
+            svg {
+                width: 2.5rem; height: 2.5rem;
+            }
+        }
+    }
+}
+

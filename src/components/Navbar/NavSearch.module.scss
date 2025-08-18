@@ -1,0 +1,88 @@
+.nav-search {
+
+    &.scrolled {
+        .search-body {
+            .logo {
+                img {
+                    width: 8rem; height: 8rem;
+                }
+            }
+
+            .form {
+                input {
+                    height: 2rem;
+                }
+            }
+
+            .close-button {
+                button {
+                    width: 4rem; height: 4rem;
+                }
+            }
+        }
+    }
+    .search-body{
+        display: none;
+        width: 100%;
+        
+        &.active {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            background-color: var(--text-dark);
+            top: 0rem; left: 0;
+            inset: 0;
+            z-index: 99;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+
+            img {
+                width: 10rem; height: 10rem;
+                transition: all .7s ease;
+            }
+        }
+
+        form {
+            flex: 3;
+            .input-box {
+                position: relative;
+                svg {
+                    position: absolute;
+                    top: 50%; left: 1rem;
+                    transform: translateY(-50%);
+                    width: 3rem; height: 3rem;
+                }
+                input {
+                    width: 100%;
+                    height: 5rem;
+                    border-radius: 1rem;
+                    padding: 0 5rem;
+                    transition: all .7s ease;
+                    font-size: 1.6rem;
+                    outline: none;
+                }
+            }
+
+        }
+
+        .close-button {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+
+            button {
+                height: 5rem; width: 5rem;
+                border-radius: 1rem;
+                transition: all .7s ease;
+                svg {
+                    width: 4rem; height: 4rem;
+                }
+            }
+        }
+    }
+}

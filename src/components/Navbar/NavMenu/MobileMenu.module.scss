@@ -1,0 +1,155 @@
+.mobile-menu {
+    position: fixed;
+    inset: 0 0 0 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--text-light);
+    transform: translateX(-100%);
+    padding: 2rem;
+    overflow-x: hidden;
+    &.show {
+        transform: translateX(0);
+    }
+
+    .loggedin-navbar {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: .1rem solid var(--primary-color);
+            padding-bottom: 1rem;
+            .user-info {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .user-avatar {
+                    background-color: var(--bg-gray);
+                    border-radius: 50%;
+                    padding: 1.4rem;
+
+                    svg {
+                        width: 1.7rem; height: 1.7rem;
+                    }
+                }
+
+            }
+
+            > svg {
+                width: 2.4rem; height: 2.4rem;
+            }
+        }
+        main {
+            margin-top: 1.5rem;
+            section {
+                ul {
+                    li {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            padding: 1.5rem 0;
+                            svg {
+                                width: 2rem; height: 2rem;
+                            }
+
+                            span {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            margin-top: auto;
+
+            .exit {
+                a {
+                    display: block;
+                    border-radius: 2rem;
+                    padding: 1rem;
+                    background-color: var(--text-dark);
+                    color: var(--text-light);
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+
+    .standart-navbar {
+        .header {
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: .1rem solid var(--text-gray);
+            padding-bottom: 1rem;
+            h1 {
+                a {
+                    img {
+                        width: 6rem; height: 6rem;
+                    }
+                }
+            }
+
+            svg {
+                width: 3rem; height: 3rem;
+            }
+        }
+
+        .main {
+            margin-top: 2rem;
+            .auth-buttons {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                margin: 3rem 0 3rem 0;
+                button {
+                        a {
+                            padding: 1rem 2.4rem;
+                            border-radius: .8rem;
+                        }
+                        &:first-child{
+                            a {
+                                background-color: var(--primary-color);
+                                color: var(--text-light);
+                                
+                            }
+                        }
+
+                        &:last-child {
+                            a {
+                                border: .1rem solid var(--primary-color);
+                            }
+                        }
+                }
+            }
+            .menu-list {
+                margin-bottom: 2rem;
+                li {
+                    padding: 1rem 0;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .social-links {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+                a {
+                    svg {
+                        width: 2rem; height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

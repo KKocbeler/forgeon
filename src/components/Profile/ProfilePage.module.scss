@@ -1,0 +1,88 @@
+.profile-page {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: 1fr;
+
+
+    aside {
+        display: none;
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            .user-avatar {
+                padding: 2rem;
+                border-radius: 50%;
+                background-color: var(--bg-gray);
+                margin-bottom: 1rem;
+                svg {
+                    height: 2rem;
+                    width: 2rem;
+                    color: var(--dark-text);
+                }
+            }
+    
+            .username {
+                font-size: 1.6rem;
+            }
+    
+            .user-email {
+                font-size: 1.3rem;
+                color: var(--forth-color);
+            }
+        }
+
+        .account-list {
+            display: grid;
+            margin-top: 2rem;
+            li {
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1.5rem 2rem;
+                    cursor: pointer;
+
+                    &.active {
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+
+                        .list-icon {
+                            svg {
+                                font-size: 2.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .profile-main {
+        margin-bottom: 3rem;
+        min-height: 90vh;
+    }
+
+    @media (min-width: 992px) {
+        min-height: 70vh;
+        grid-template-columns: 30rem 4fr;
+        gap: 3rem;
+        margin-top: 18rem;
+
+        aside {
+            display: block;
+        }
+
+        .profile-main {
+            min-height: auto;
+        }
+    }
+}

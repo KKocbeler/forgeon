@@ -1,0 +1,16 @@
+.product-page {
+    margin-top: 9rem;
+
+    h1 {
+        font-size: 2.4rem;
+        font-weight: 300;
+    }
+
+    @media (min-width: 1200px) {
+        margin-top: 17rem;
+
+        h1 {
+            font-size: 3.2rem;
+        }
+    }
+}

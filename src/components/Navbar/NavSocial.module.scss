@@ -1,0 +1,36 @@
+.nav-social {
+    flex: 1;
+
+    &.scrolled {
+        ul {
+            li {
+                svg {
+                    width: 2rem; height: 2rem;
+                }
+            }
+        }
+    }
+
+    ul {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+        gap: 1.5rem;
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            li {
+                svg {
+                    width: 2.4rem; height: 2.4rem;
+                    color: var(--secondary-color);
+                    transition: all .7s ease;
+                }
+            }
+        }
+
+    }
+}

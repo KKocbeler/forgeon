@@ -1,0 +1,109 @@
+.footer {
+    width: 100%;
+    margin-top: auto;
+    border-top: .1rem solid var(--primary-color);
+
+    .footer-body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 4rem;
+        padding: 4rem 0;
+
+        @media (min-width: 576px) {
+            flex-direction: row;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+            img {
+                display: block;
+                width: 10rem; height: 10rem;
+
+                @media (min-width: 1024px) {
+                    width: 12rem;
+                    height: 12rem;
+                }
+            }
+        }
+
+        .social-media {
+            flex: 1;
+            .footer-list-title {
+                font-size: 1.6rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+
+                li {
+                    border: .1rem solid var(--primary-color);
+                    padding: 1rem;
+                    border-radius: 50%;
+                    transition: all .3s ease;
+                    cursor: pointer;
+                    transform: scale(1);
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+                    &:hover {
+                        background-color: var(--primary-color);
+                        transform: scale(1.2);
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                        svg {
+                            color: var(--text-light);
+                        }
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        svg {
+                            width: 2rem; height: 2rem;
+                            transition: all .3s ease;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .footer-menu {
+            display: flex;
+            justify-content: space-around;
+            flex: 3;
+            .footer-lists {
+                .footer-list-title {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+
+                ul {
+                    li {
+                        margin-bottom: 1rem;
+                        a {
+                            font-size: 1.4rem;
+                            color: var(--text-gray);
+                            transition: all .3s ease;
+
+                            &:hover {
+                                color: var(--secondary-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
