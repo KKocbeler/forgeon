@@ -1,7 +1,7 @@
 .mobile-menu {
     position: fixed;
     inset: 0 0 0 0;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     background-color:var(--text-light);
@@ -103,7 +103,6 @@
                 width: 3rem; height: 3rem;
             }
         }
-
         .main {
             margin-top: 2rem;
             .auth-buttons {
