@@ -21,7 +21,7 @@ const productSlice = createSlice({
     name: 'products',
     initialState: {
         products: [...data],
-        loading: false,
+        loading: true,
         error: null,
         keyword: "",
         sortType: null,

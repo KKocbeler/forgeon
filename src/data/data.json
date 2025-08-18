@@ -195,12 +195,12 @@
   },
     {
   "id": "101",
-  "name": "Pizza Fırını",
+  "name": "Ahşap Tablo",
   "brand": "Forgeon",
   "tags": ["dekoratif", "raf", "duvar", "modern", "yavuziti"],
   "isPublished": true,
-  "discount": true,
-  "adjustible": true,
+  "discount": false,
+  "adjustible": false,
   "discountRate": 20,
   "stock": 80,
   "image": "/detail/detail-1.webp",
@@ -214,7 +214,7 @@
     {"label": "tür", "key":"boyut", "values": ["küçük", "orta", "büyük"]}
   ],
   "variants": [
-    { "variantId": "1", "renk": "beyaz", "boyut": "küçük", "price": 19.99, "stock": 10, "quantity": 1 },
+    { "variantId": "1", "renk": "beyaz", "boyut": "küçük", "price": 59.99, "stock": 10, "quantity": 1 },
     { "variantId": "2", "renk": "beyaz", "boyut": "orta", "price": 29.99, "stock": 10, "quantity": 1 },
     { "variantId": "3", "renk": "beyaz", "boyut": "büyük", "price": 39.99, "stock": 10, "quantity": 1 },
     { "variantId": "4", "renk": "siyah", "boyut": "küçük", "price": 49.99, "stock": 10, "quantity": 1 },
