@@ -28,7 +28,7 @@ const NavSocial = ({handleScroll}: scrollProps) => {
             {
                 navSocialItems.map((socialLink, s) => (
                     <li key={s}>
-                        <a href={socialLink.path} aria-label={socialLink.label} target='_blank' rel='noopener noreferer'>{socialLink.icon}</a>
+                        <a href={socialLink.path} aria-label={socialLink.label} title={socialLink.label} target='_blank' rel='noopener noreferer'>{socialLink.icon}</a>
                     </li>
                 ))
             }

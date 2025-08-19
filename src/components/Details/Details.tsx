@@ -27,7 +27,7 @@ const Details = () => {
         const foundProduct = data.filter(dt => linkText(dt.name) === name)
         setSelectedProduct(foundProduct[0])
     }, [name])
-
+    console.log(stockOptions)
     useEffect(() => {
         if(selectedProduct?.optionValues) {
             const initialOptions: { [key: string]: string} = {};
@@ -45,8 +45,9 @@ const Details = () => {
     // seçilen büyüklüğe göre veya türe göre para değişimi
     const selectedVariant = selectedProduct?.variants.find(variant => {
         return Object.entries(stockOptions || {}).every(([key, value]) => variant[key] === value)
-    }) 
+    })
     console.log(selectedVariant)
+    const selectedTree = selectedProduct?.images[selectedVariant?.tree || ""] || [];
     //add-cart 
     const addCart = () => {
         if (!selectedProduct || !selectedVariant) return;
@@ -94,7 +95,7 @@ const Details = () => {
         <div className="details">
             <DetailBreadcrumb name={selectedProduct?.name} />
             <div className="details-body">
-                <DetailGallery images={selectedProduct?.images || []}/>
+                <DetailGallery selectedTree={selectedTree.length > 0 ? selectedTree : []}/>
                 <div className="detail-box">
                     <h1 className="name">{selectedProduct?.name}</h1>             
                     <div className="price">₺{selectedVariant?.price}</div>

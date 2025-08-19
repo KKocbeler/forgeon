@@ -31,7 +31,9 @@
                         margin-bottom: .2rem;
                     }
 
-                    .name {
+                    h3.name {
+                        font-size: 1.5rem;
+                        font-weight: 400;
                         margin-bottom: .7rem;
                     }
 
@@ -79,7 +81,7 @@
                             font-size: 1.6rem;
                         }
 
-                        .name {
+                        h3.name {
                             font-size: 1.4rem;
                         }
 
@@ -124,8 +126,8 @@
                             font-size: 1.6rem;
                         }
 
-                        .name {
-                            font-size: 1.4rem;
+                        h3.name {
+                            font-size: 1.5rem;
                         }
 
                         .price {

@@ -1,6 +1,6 @@
 export interface Variant {
+    [key: string]: string | number
     variantId: string;
-    [key: string]: string | number;
     price: number;
     stock: number;
     quantity: number;
@@ -31,7 +31,7 @@ export interface DataTypes {
     discountRate: number
     stock: number
     image: string
-    images: string[]
+    images: {[key: string]: string[]}
     optionValues: {label: string, key: string, values: string[]}[]
     variants: Variant[];
     infoSections: InfoSections[];

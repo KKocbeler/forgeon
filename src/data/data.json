@@ -1,71 +1,5 @@
 [
   {
-  "id": "106",
-  "name": "Dekoratif Raf Ünitesi",
-  "brand": "Forgeon",
-  "tags": ["dekoratif", "raf", "duvar", "modern", "yavuziti"],
-  "isPublished": true,
-  "discount": true,
-  "adjustible": true,
-  "discountRate": 20,
-  "stock": 80,
-  "image": "/detail/detail-1.webp",
-  "images": [
-    "/detail/detail-1.webp",
-    "/detail/detail-2.webp",
-    "/detail/detail-3.webp",    
-    "/detail/detail-1.webp",
-    "/detail/detail-2.webp"
-  ],
-  "optionValues": [
-    {"label": "renk", "key":"renk", "values": ["beyaz", "siyah", "ceviz"]},
-    {"label": "tür", "key":"boyut", "values": ["küçük", "orta", "büyük"]}
-  ],
-  "variants": [
-    { "variantId": "1", "renk": "beyaz", "boyut": "küçük", "price": 19.99, "stock": 10, "quantity": 1 },
-    { "variantId": "2", "renk": "beyaz", "boyut": "orta", "price": 29.99, "stock": 10, "quantity": 1 },
-    { "variantId": "3", "renk": "beyaz", "boyut": "büyük", "price": 39.99, "stock": 10, "quantity": 1 },
-    { "variantId": "4", "renk": "siyah", "boyut": "küçük", "price": 49.99, "stock": 10, "quantity": 1 },
-    { "variantId": "5", "renk": "siyah", "boyut": "orta", "price": 59.99, "stock": 10, "quantity": 1 },
-    { "variantId": "6", "renk": "siyah", "boyut": "büyük", "price": 69.99, "stock": 10, "quantity": 1 },
-    { "variantId": "7", "renk": "ceviz", "boyut": "küçük", "price": 79.99, "stock": 7, "quantity": 1 },
-    { "variantId": "8", "renk": "ceviz", "boyut": "orta", "price": 89.99, "stock": 5, "quantity": 1 },
-    { "variantId": "9", "renk": "ceviz", "boyut": "büyük", "price": 99.99, "stock": 7, "quantity": 1 }
-  ],
-  "infoSections": [
-    {
-      "title": "Açıklama",
-      "content": "Bu raf ünitesi, minimal ve şık bir tasarıma sahiptir. Duvara monte edilebilir ve dayanıklı malzemeden üretilmiştir."
-    },
-    {
-      "title": "Garanti Şartları",
-      "content": "Ürün 2 yıl üretici garantisi kapsamındadır. Kullanıcı kaynaklı hasarlar garanti dışıdır."
-    },
-    {
-      "title": "İade Şartları",
-      "content": "Ürünü teslim aldıktan sonra 14 gün içerisinde, kullanılmamış ve orijinal ambalajında olacak şekilde iade edebilirsiniz."
-    }
-  ],
-  "comments": [
-    {
-      "id": "cmt-002",
-      "username": "Ayşe Yıldız",
-      "message": "Ürün beklediğimden çok daha kaliteli çıktı. Paketleme de özenliydi. Teşekkürler!",
-      "rating": 5,
-      "createdAt": "2025-07-15T14:30:00",
-      "totalLikes": 0
-    },
-    {
-      "id": "cmt-003",
-      "username": "Mehmet Demir",
-      "message": "Hızlı kargo ama ürün biraz küçük geldi. Açıklamalara dikkat edilmeli.",
-      "rating": 3,
-      "createdAt": "2025-07-14T10:15:00",
-      "totalLikes": 0
-    }
-  ]
-  },
-  {
   "id": "107",
   "name": "Pizza Fırını",
   "brand": "Forgeon",
@@ -76,153 +10,37 @@
   "discountRate": 20,
   "stock": 80,
   "image": "/detail/detail-1.webp",
-  "images": [
-    "/detail/detail-1.webp",
-    "/detail/detail-2.webp",
-    "/detail/detail-3.webp"
-  ],
-  "optionValues": [
-    {"label": "renk", "key":"renk", "values": ["beyaz", "siyah", "ceviz"]},
-    {"label": "tür", "key":"boyut", "values": ["küçük", "orta", "büyük"]}
-  ],
-  "variants": [
-    { "variantId": "1", "renk": "beyaz", "boyut": "küçük", "price": 19.99, "stock": 10, "quantity": 1 },
-    { "variantId": "2", "renk": "beyaz", "boyut": "orta", "price": 29.99, "stock": 10, "quantity": 1 },
-    { "variantId": "3", "renk": "beyaz", "boyut": "büyük", "price": 39.99, "stock": 10, "quantity": 1 },
-    { "variantId": "4", "renk": "siyah", "boyut": "küçük", "price": 49.99, "stock": 10, "quantity": 1 },
-    { "variantId": "5", "renk": "siyah", "boyut": "orta", "price": 59.99, "stock": 10, "quantity": 1 },
-    { "variantId": "6", "renk": "siyah", "boyut": "büyük", "price": 69.99, "stock": 10, "quantity": 1 },
-    { "variantId": "7", "renk": "ceviz", "boyut": "küçük", "price": 79.99, "stock": 7, "quantity": 1 },
-    { "variantId": "8", "renk": "ceviz", "boyut": "orta", "price": 89.99, "stock": 5, "quantity": 1 },
-    { "variantId": "9", "renk": "ceviz", "boyut": "büyük", "price": 99.99, "stock": 7, "quantity": 1 }
-  ],
-  "infoSections": [
-    {
-      "title": "Açıklama",
-      "content": "Bu raf ünitesi, minimal ve şık bir tasarıma sahiptir. Duvara monte edilebilir ve dayanıklı malzemeden üretilmiştir."
-    },
-    {
-      "title": "Garanti Şartları",
-      "content": "Ürün 2 yıl üretici garantisi kapsamındadır. Kullanıcı kaynaklı hasarlar garanti dışıdır."
-    },
-    {
-      "title": "İade Şartları",
-      "content": "Ürünü teslim aldıktan sonra 14 gün içerisinde, kullanılmamış ve orijinal ambalajında olacak şekilde iade edebilirsiniz."
-    }
-  ],
-  "comments": [
-    {
-      "id": "cmt-002",
-      "username": "Ayşe Yıldız",
-      "message": "Ürün beklediğimden çok daha kaliteli çıktı. Paketleme de özenliydi. Teşekkürler!",
-      "rating": 5,
-      "createdAt": "2025-07-15T14:30:00",
-      "totalLikes": 0
-    },
-    {
-      "id": "cmt-003",
-      "username": "Mehmet Demir",
-      "message": "Hızlı kargo ama ürün biraz küçük geldi. Açıklamalara dikkat edilmeli.",
-      "rating": 3,
-      "createdAt": "2025-07-14T10:15:00",
-      "totalLikes": 0
-    }
-  ]
+  "images": {
+    "meşe": [
+      "/detail/detail-1.webp",
+      "/detail/detail-2.webp",
+      "/detail/detail-3.webp"
+    ],
+    "zeytin": [
+      "/top-sellers/image-1.jpg",
+      "/top-sellers/image-1.jpg",
+      "/top-sellers/image-1.jpg"
+    ],
+    "ceviz": [
+        "/detail/detail-1.webp",
+        "/detail/detail-2.webp",
+        "/detail/detail-3.webp"
+      ]
   },
-    {
-  "id": "102",
-  "name": "Pizza Fırını",
-  "brand": "Forgeon",
-  "tags": ["dekoratif", "raf", "duvar", "modern", "yavuziti"],
-  "isPublished": true,
-  "discount": true,
-  "adjustible": true,
-  "discountRate": 20,
-  "stock": 80,
-  "image": "/detail/detail-1.webp",
-  "images": [
-    "/detail/detail-1.webp",
-    "/detail/detail-2.webp",
-    "/detail/detail-3.webp"
-  ],
   "optionValues": [
-    {"label": "renk", "key":"renk", "values": ["beyaz", "siyah", "ceviz"]},
-    {"label": "tür", "key":"boyut", "values": ["küçük", "orta", "büyük"]}
+    {"label": "Ağaç Türü", "key":"tree", "values": ["meşe", "zeytin", "ceviz"]},
+    {"label": "tür", "key":"boyut", "values": ["12x20cm", "20x25cm", "15x30cm"]}
   ],
   "variants": [
-    { "variantId": "1", "renk": "beyaz", "boyut": "küçük", "price": 19.99, "stock": 10, "quantity": 1 },
-    { "variantId": "2", "renk": "beyaz", "boyut": "orta", "price": 29.99, "stock": 10, "quantity": 1 },
-    { "variantId": "3", "renk": "beyaz", "boyut": "büyük", "price": 39.99, "stock": 10, "quantity": 1 },
-    { "variantId": "4", "renk": "siyah", "boyut": "küçük", "price": 49.99, "stock": 10, "quantity": 1 },
-    { "variantId": "5", "renk": "siyah", "boyut": "orta", "price": 59.99, "stock": 10, "quantity": 1 },
-    { "variantId": "6", "renk": "siyah", "boyut": "büyük", "price": 69.99, "stock": 10, "quantity": 1 },
-    { "variantId": "7", "renk": "ceviz", "boyut": "küçük", "price": 79.99, "stock": 7, "quantity": 1 },
-    { "variantId": "8", "renk": "ceviz", "boyut": "orta", "price": 89.99, "stock": 5, "quantity": 1 },
-    { "variantId": "9", "renk": "ceviz", "boyut": "büyük", "price": 99.99, "stock": 7, "quantity": 1 }
-  ],
-  "infoSections": [
-    {
-      "title": "Açıklama",
-      "content": "Bu raf ünitesi, minimal ve şık bir tasarıma sahiptir. Duvara monte edilebilir ve dayanıklı malzemeden üretilmiştir."
-    },
-    {
-      "title": "Garanti Şartları",
-      "content": "Ürün 2 yıl üretici garantisi kapsamındadır. Kullanıcı kaynaklı hasarlar garanti dışıdır."
-    },
-    {
-      "title": "İade Şartları",
-      "content": "Ürünü teslim aldıktan sonra 14 gün içerisinde, kullanılmamış ve orijinal ambalajında olacak şekilde iade edebilirsiniz."
-    }
-  ],
-  "comments": [
-    {
-      "id": "cmt-002",
-      "username": "Ayşe Yıldız",
-      "message": "Ürün beklediğimden çok daha kaliteli çıktı. Paketleme de özenliydi. Teşekkürler!",
-      "rating": 5,
-      "createdAt": "2025-07-15T14:30:00",
-      "totalLikes": 0
-    },
-    {
-      "id": "cmt-003",
-      "username": "Mehmet Demir",
-      "message": "Hızlı kargo ama ürün biraz küçük geldi. Açıklamalara dikkat edilmeli.",
-      "rating": 3,
-      "createdAt": "2025-07-14T10:15:00",
-      "totalLikes": 0
-    }
-  ]
-  },
-    {
-  "id": "101",
-  "name": "Ahşap Tablo",
-  "brand": "Forgeon",
-  "tags": ["dekoratif", "raf", "duvar", "modern", "yavuziti"],
-  "isPublished": true,
-  "discount": false,
-  "adjustible": false,
-  "discountRate": 20,
-  "stock": 80,
-  "image": "/detail/detail-1.webp",
-  "images": [
-    "/detail/detail-1.webp",
-    "/detail/detail-2.webp",
-    "/detail/detail-3.webp"
-  ],
-  "optionValues": [
-    {"label": "renk", "key":"renk", "values": ["beyaz", "siyah", "ceviz"]},
-    {"label": "tür", "key":"boyut", "values": ["küçük", "orta", "büyük"]}
-  ],
-  "variants": [
-    { "variantId": "1", "renk": "beyaz", "boyut": "küçük", "price": 59.99, "stock": 10, "quantity": 1 },
-    { "variantId": "2", "renk": "beyaz", "boyut": "orta", "price": 29.99, "stock": 10, "quantity": 1 },
-    { "variantId": "3", "renk": "beyaz", "boyut": "büyük", "price": 39.99, "stock": 10, "quantity": 1 },
-    { "variantId": "4", "renk": "siyah", "boyut": "küçük", "price": 49.99, "stock": 10, "quantity": 1 },
-    { "variantId": "5", "renk": "siyah", "boyut": "orta", "price": 59.99, "stock": 10, "quantity": 1 },
-    { "variantId": "6", "renk": "siyah", "boyut": "büyük", "price": 69.99, "stock": 10, "quantity": 1 },
-    { "variantId": "7", "renk": "ceviz", "boyut": "küçük", "price": 79.99, "stock": 7, "quantity": 1 },
-    { "variantId": "8", "renk": "ceviz", "boyut": "orta", "price": 89.99, "stock": 5, "quantity": 1 },
-    { "variantId": "9", "renk": "ceviz", "boyut": "büyük", "price": 99.99, "stock": 7, "quantity": 1 }
+    { "variantId": "1", "tree": "meşe", "boyut": "12x20cm", "price": 19.99, "stock": 10, "quantity": 1 },
+    { "variantId": "2", "tree": "meşe", "boyut": "20x25cm", "price": 29.99, "stock": 10, "quantity": 1 },
+    { "variantId": "3", "tree": "meşe", "boyut": "15x30cm", "price": 39.99, "stock": 10, "quantity": 1 },
+    { "variantId": "4", "tree": "zeytin", "boyut": "12x20cm", "price": 49.99, "stock": 10, "quantity": 1 },
+    { "variantId": "5", "tree": "zeytin", "boyut": "20x25cm", "price": 59.99, "stock": 10, "quantity": 1 },
+    { "variantId": "6", "tree": "zeytin", "boyut": "15x30cm", "price": 69.99, "stock": 10, "quantity": 1 },
+    { "variantId": "7", "tree": "ceviz", "boyut": "12x20cm", "price": 79.99, "stock": 7, "quantity": 1 },
+    { "variantId": "8", "tree": "ceviz", "boyut": "20x25cm", "price": 89.99, "stock": 5, "quantity": 1 },
+    { "variantId": "9", "tree": "ceviz", "boyut": "15x30cm", "price": 99.99, "stock": 7, "quantity": 1 }
   ],
   "infoSections": [
     {

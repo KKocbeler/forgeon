@@ -10,6 +10,7 @@ import type { RootState } from '../../redux/app/store';
 import { addToCart, decreaseProduct, removeFromCart } from '../../redux/features/cart/cartSlice';
 import { capitalize } from '../../utils/Capitalized';
 import { BsCartFill } from 'react-icons/bs';
+import { linkText } from '../../utils/LinkTextEdit';
 
 interface PropsType {
     isCartOpen: boolean;
@@ -53,9 +54,9 @@ const SideCart: React.FC<PropsType> = ({isCartOpen, setIsCartOpen}) => {
     return (
         <div className={`${styles["side-cart"]} ${isCartOpen ? styles.show : ""}`}>
             <div className={`${styles.body} ${isCartOpen ? styles.show : ""}`} ref={cartRef}>
-                <div className={styles["close-cart"]}>
-                    <IoCloseOutline onClick={() => setIsCartOpen(false)}/>
-                </div>
+                <button type='button' className={styles["close-cart"]} onClick={() => setIsCartOpen(false)}>
+                    <IoCloseOutline />
+                </button>
                 <h3 className={styles["title"]}>Alışveriş Sepetin</h3>
                 {
                     cart.length > 0 
@@ -64,31 +65,33 @@ const SideCart: React.FC<PropsType> = ({isCartOpen, setIsCartOpen}) => {
                             {
                                 cart.map(product => (
                                     <li className={styles["product"]} key={product.id}>
-                                        <div className={styles["product-image"]}>
-                                            <img src="/product-image/product-1.webp" alt={product.name} />
-                                        </div>
-                                        <div className={styles["product-info"]}>
-                                            <h4 className={styles["product-name"]}>{product.name}</h4>
-                                            <div className={styles["product-features"]}>
-                                                {
-                                                    Object.entries(product.variant).filter(([key]) => allowedKeys.includes(key)).map(([key, value]) => (
-                                                        <div className={styles["product-feature"]}><span>{capitalize(key)}:</span> {capitalize(value as string)}</div>
-                                                    ))
-                                                }
-                                                <div className={styles["product-feature"]}><span>Fiyat: </span>₺ {product.variant.price}</div>
+                                        <Link to={`/products/${linkText(product.name)}`} onClick={() => setIsCartOpen(false)}>
+                                            <div className={styles["product-image"]}>
+                                                <img src="/product-image/product-1.webp" alt={product.name} />
                                             </div>
-                                            <div className={styles["product-price"]}>
-                                                <div className={styles["count"]}>
-                                                    <div className={styles.piece}>Adet:</div>
-                                                    <div className={styles["product-quantity"]}>
-                                                        <button type='button' aria-label='Azalt' className={styles["quantity-control"]} onClick={() => dispatch(decreaseProduct(product))}><FaMinus /></button>
-                                                        <div className={styles.quantity}>{product.variant.quantity}</div>
-                                                        <button type='button' aria-label='Arttır' className={styles["quantity-control"]} onClick={() => dispatch(addToCart(product))}><FaPlus /></button>
-                                                    </div>
+                                            <div className={styles["product-info"]}>
+                                                <h4 className={styles["product-name"]}>{product.name}</h4>
+                                                <div className={styles["product-features"]}>
+                                                    {
+                                                        Object.entries(product.variant).filter(([key]) => allowedKeys.includes(key)).map(([key, value]) => (
+                                                            <div className={styles["product-feature"]}><span>{capitalize(key)}:</span> {capitalize(value as string)}</div>
+                                                        ))
+                                                    }
+                                                    <div className={styles["product-feature"]}><span>Fiyat: </span>₺ {product.variant.price}</div>
                                                 </div>
-                                                <div className={styles["price"]}> <strong>₺ {(product.variant.price * product.variant.quantity).toFixed(2)}</strong></div>
+                                                <div className={styles["product-price"]}>
+                                                    <div className={styles["count"]}>
+                                                        <div className={styles.piece}>Adet:</div>
+                                                        <div className={styles["product-quantity"]}>
+                                                            <button type='button' aria-label='Azalt' className={styles["quantity-control"]} onClick={() => dispatch(decreaseProduct(product))}><FaMinus /></button>
+                                                            <div className={styles.quantity}>{product.variant.quantity}</div>
+                                                            <button type='button' aria-label='Arttır' className={styles["quantity-control"]} onClick={() => dispatch(addToCart(product))}><FaPlus /></button>
+                                                        </div>
+                                                    </div>
+                                                    <div className={styles["price"]}> <strong>₺ {(product.variant.price * product.variant.quantity).toFixed(2)}</strong></div>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                         <button type='button' aria-label={`${product.name} ürününü sepetten sil`} className={styles["delete-product"]} onClick={() => dispatch(removeFromCart(product))}>
                                             <AiFillDelete />
                                         </button>

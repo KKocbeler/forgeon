@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 import { MdArrowBack, MdArrowDownward, MdArrowForward, MdArrowUpward } from "react-icons/md";
 
 interface PropsType {
-    images: string[]
+    selectedTree: string[]
 }
 
-const DetailGallery = ({images}: PropsType) => {
+const DetailGallery = ({selectedTree}: PropsType) => {
     const [selectedImage, setSelectedImage] = useState<number>(0);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1024)
     useEffect(() => {
@@ -29,13 +29,13 @@ const DetailGallery = ({images}: PropsType) => {
             if(prev >= 1) {
                 return prev - 1
             } else {
-                return images.length - 1
+                return selectedTree.length - 1
             }
         })
     }
     const handlePlusIndex = () => {
         setSelectedImage(prev => {
-            if(prev < images.length - 1) {
+            if(prev < selectedTree.length - 1) {
                 return prev + 1
             } else {
                 return 0
@@ -52,7 +52,7 @@ const DetailGallery = ({images}: PropsType) => {
                 spaceBetween={isMobile ? 70 : 20}
                 draggable
                 >
-                {images.map((img, index) => (
+                {selectedTree.map((img, index) => (
                     <SwiperSlide key={index}>
                         <img
                             src={img}
@@ -66,7 +66,7 @@ const DetailGallery = ({images}: PropsType) => {
                 <div className="direction" onClick={handlePlusIndex}>{ isMobile ? <MdArrowForward /> : <MdArrowDownward />}</div>
             </div>
             <div className="big-slider">
-                <img src={images[selectedImage]} alt="Büyük Görsel" />
+                <img src={selectedTree[selectedImage]} alt="Büyük Görsel" />
             </div>
         </div>
     )

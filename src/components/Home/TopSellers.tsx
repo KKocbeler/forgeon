@@ -9,49 +9,49 @@ import { Link } from 'react-router-dom';
 const productImages = [
   {
     name: "Turuncu Modern Koltuk",
-    path: "/top-sellers/image-1.jpg",
+    path: "/detail/detail-3.webp",
     price: 149.99,
     brand: "Porgeon"
   },
   {
     name: "Doğal Ahşap Masa",
-    path: "/top-sellers/image-1.jpg",
+    path: "/detail/detail-3.webp",
     price: 129.99,
     brand: "Porgeon"
   },
   {
     name: "Odun Kartal Figürü",
-    path: "/top-sellers/image-1.jpg",
+    path: "/detail/detail-3.webp",
     price: 99.99,
     brand: "Porgeon"
   },
   {
     name: "Ahşap Çekmece",
-    path: "/top-sellers/image-1.jpg",
+    path: "/detail/detail-3.webp",
     price: 119.99,
     brand: "Porgeon"
   },
   {
     name: "Turuncu Modern Koltuk",
-    path: "/top-sellers/image-1.jpg",
+    path: "/detail/detail-3.webp",
     price: 149.99,
     brand: "Porgeon"
   },
   {
     name: "Doğal Ahşap Masa",
-    path: "/top-sellers/image-1.jpg",
+    path: "/detail/detail-3.webp",
     price: 129.99,
     brand: "Porgeon"
   },
   {
     name: "Odun Kartal Figürü",
-    path: "/top-sellers/image-1.jpg",
+    path: "/detail/detail-3.webp",
     price: 99.99,
     brand: "Porgeon"
   },
   {
     name: "Ahşap Çekmece",
-    path: "/top-sellers/image-1.jpg",
+    path: "/detail/detail-3.webp",
     price: 119.99,
     brand: "Porgeon"
   },
@@ -60,10 +60,9 @@ const productImages = [
 
 const TopSellers = () => {
   return (
-    <div className="top-sellers">
+    <section className="top-sellers">
         <h2>En Çok Satanlar</h2>
-        <div>
-            <Swiper
+        <Swiper
             modules={[Navigation]}
             slidesPerView={4}
             slidesPerGroup={2}
@@ -87,26 +86,29 @@ const TopSellers = () => {
                 spaceBetween: 20,
                 },
             }}
-            >
-                {
-                    productImages.map((product, index) => (
-                        <SwiperSlide key={index}>
-                            <Link to={'/'}>
-                                <div className="product-image">
-                                    <img src={product.path} alt={product.name} loading='lazy'/>
-                                </div>
-                                <div className="product-body">
-                                    <div className="brand">{product.brand}</div>
-                                    <div className='name'>{product.name}</div>
-                                    <div className='price'>₺{product.price}</div>
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                    ))
-                }
-            </Swiper>
-        </div>
-    </div>
+        >
+            {
+                productImages.map((product, index) => (
+                    <SwiperSlide key={index}>
+                        <article>
+                          <Link to={'/'}>
+                              <div className="product-image">
+                                  <img src={product.path} alt={product.name} loading='lazy'/>
+                              </div>
+                              <div className="product-body">
+                                  <p className="brand">{product.brand}</p>
+                                  <h3 className='name'>{product.name}</h3>
+                                  <div className='price'>
+                                      <span>₺{product.price}</span>
+                                  </div>
+                              </div>
+                          </Link>
+                        </article>
+                    </SwiperSlide>
+                ))
+            }
+        </Swiper>
+    </section>
   )
 }
 

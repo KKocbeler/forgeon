@@ -18,7 +18,9 @@ const NavSearch = ({handleScroll}: PropsType) => {
 
   return (
     <div className={`${styles["nav-search"]} ${handleScroll ? styles.scrolled : ""} `}>
-        <IoSearchOutline  onClick={() => setToggleSearch(!toggleSearch)}/>
+        <button type='button' aria-label='Arama Aç/Kapat' onClick={() => setToggleSearch(!toggleSearch)}>
+            <IoSearchOutline />
+        </button>
         <div className={`${styles["search-body"]} ${toggleSearch ? styles.active : ""}`}>
             <div className={styles.logo}>
                 <img src="/logo/forg.png" alt="Company Logo" loading='lazy'/>
