@@ -1,5 +1,5 @@
 .profile-page {
-    margin-top: 7rem;
+    margin-top: 9rem;
     display: grid;
     grid-template-columns: 1fr;
 
@@ -71,11 +71,11 @@
         min-height: 90vh;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
         min-height: 70vh;
         grid-template-columns: 30rem 4fr;
         gap: 3rem;
-        margin-top: 18rem;
+        margin-top: 17rem;
 
         aside {
             display: block;

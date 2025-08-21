@@ -3,7 +3,7 @@ import styles from "./NavSocial.module.scss";
 import { FaFacebook, FaTiktok } from "react-icons/fa";
 import type { scrollProps } from "./Navbar";
 
-const navSocialItems = [
+ export const navSocialItems = [
   {
     path: "https://www.instagram.com/",
     icon: <IoLogoInstagram />,

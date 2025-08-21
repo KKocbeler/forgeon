@@ -8,7 +8,6 @@
   "discount": true,
   "adjustible": true,
   "discountRate": 20,
-  "stock": 80,
   "image": "/detail/detail-1.webp",
   "images": {
     "meşe": [

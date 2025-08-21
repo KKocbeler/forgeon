@@ -20,7 +20,7 @@ const navMenu = [
     { title: "Anasayfa", path: "/" },
     { title: "Ürünlerimiz", path: "/products" },
     { title: "Tablolar", path: "/tablo" },
-    { title: "Figürler", path: "/oda-kokusu" }
+    { title: "İletişim", path: "/contact" }
 ];
 
 const accountList = [
@@ -56,8 +56,8 @@ const accountList = [
         },
         {
           icon: <CiSettings />,
-          title: "Ayarlar",
-          path: "/profile/settings"
+          title: "İletişin",
+          path: "/contact"
         },
 ];
 

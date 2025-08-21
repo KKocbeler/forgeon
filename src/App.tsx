@@ -16,6 +16,9 @@ import ProfileOrders from "./components/Profile/ProfilePage/ProfileOrder/Profile
 import ProfileAddresses from "./components/Profile/ProfilePage/ProfileAddresses"
 import ProfileInfo from "./components/Profile/ProfilePage/ProfileInfo"
 import ProfileFavorites from "./components/Profile/ProfilePage/ProfileFavorites"
+import Contact from "./pages/Contact"
+import NotFound from "./components/Pieces/NotFound"
+import TermsPrivacy from "./components/HelperPages/Terms-Privacy/TermsPrivacy"
 
 function App() {
     return (
@@ -41,6 +44,9 @@ function App() {
                             <Route path="/returns-and-exchanges" element={<Return />} />
                             <Route path="/my-cart" element={<MyCart />} />
                             <Route path="/payment" element={<Payment />} />
+                            <Route path="/contact" element={<Contact />} />
+                            <Route path="/terms-and-privacy" element={<TermsPrivacy />} />
+                            <Route path="*" element={<NotFound />} />
                         </Route>
                     </Routes>
             </Router>

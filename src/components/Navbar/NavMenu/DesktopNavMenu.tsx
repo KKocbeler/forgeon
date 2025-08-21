@@ -6,7 +6,7 @@ const navMenu = [
     { title: "Anasayfa", path: "/" },
     { title: "Ürünlerimiz", path: "/products" },
     { title: "Tablolar", path: "/tablo" },
-    { title: "Figürler", path: "/oda-kokusu" }
+    { title: "İletişim", path: "/contact" }
 ];
 
 const DesktopNavMenu = ({handleScroll}: scrollProps) => {
@@ -33,7 +33,7 @@ const DesktopNavMenu = ({handleScroll}: scrollProps) => {
                     {
                         navMenu.slice(2, 4).map((item, j) => (
                             <li key={j}>
-                                <Link to={'/'}>
+                                <Link to={item.path}>
                                     {item.title}
                                 </Link>
                             </li>  

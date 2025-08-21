@@ -26,11 +26,10 @@ const footerLinks = [
   {
     title: "Faydalı Bağlantılar",
     items: [
-      { name: "Hakkımızda", path: "/about-us" },
+      { name: "Hakkımızda", path: "/about" },
       { name: "Kullanım ve Gizlilik", path: "/terms-and-privacy" },
       { name: "İade ve Değişim", path: "/returns-and-exchanges" },
       { name: "İletişim", path: "/contact" },
-      { name: "B2B Kayıt", path: "/b2b-register" },
       { name: "S.S.S", path: "/faq" }
     ]
   }

@@ -3,44 +3,88 @@ import { useState } from "react";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 const faqItems = [
   {
-    question: "Siparişimi ne zaman teslim alabilirim?",
-    answer: "Siparişiniz 1-3 iş günü içerisinde kargoya verilir. Teslimat süresi genellikle 2-5 iş günü sürmektedir."
+    question: "Ürünleriniz tamamen el yapımı mı yoksa makineler de kullanılıyor mu?",
+    answer: "Ahşap oyma ürünlerimiz CNC makinesinde işlenmektedir. Sonrasında yapılan detay temizliği ve koruma yağları, vernikleri el işçiliği ile yapılmaktadır."
+  },
+  {
+    question: "Ahşap ürünler sağlığa zararlı boya veya kimyasal içeriyor mu?",
+    answer: "Hayır, ürünlerimizde sağlığa zararlı boya veya kimyasal kullanılmaz. Doğal ahşap yağları ve vernikler tercih edilir."
+  },
+  {
+    question: "Ürünlerde kişisel yazı, logo veya tarih ekletebilir miyim?",
+    answer: "Evet, dilediğiniz yazı, logo veya tarih ürünlere işlenebilir. Bunun için sipariş öncesinde bizimle iletişime geçmeniz yeterlidir."
+  },
+  {
+    question: "Özel tasarım siparişleri için nasıl iletişim kurabilirim?",
+    answer: "Web sitemiz üzerinden iletişim formu veya WhatsApp hattımız aracılığıyla bizimle iletişime geçebilirsiniz."
+  },
+  {
+    question: "Özel siparişlerde üretim süresi ne kadar sürer?",
+    answer: "Üretim süresi tasarıma ve boyuta göre değişmektedir. Ortalama 7–15 iş günü içinde teslim edilir."
+  },
+  {
+    question: "Aynı üründen toplu sipariş verebilir miyim (hediyelik/organizasyon için)?",
+    answer: "Evet, toplu siparişlerde özel fiyatlandırma yapılır. Organizasyonlar, hediyelikler ve kurumsal etkinlikler için toplu üretim yapabiliyoruz."
+  },
+  {
+    question: "Siparişimden sonra değişiklik yapabilir miyim?",
+    answer: "Stok ürünlerde kargo öncesine kadar değişiklik yapılabilir. Özel siparişlerde ise üretim başladıktan sonra değişiklik mümkün olmayabilir."
+  },
+  {
+    question: "Ürün fotoğraflarıyla gerçekte gelen ürün arasında fark olur mu?",
+    answer: "Tüm fotoğraflar gerçek ürünlere aittir. Ancak ahşap doğal bir malzeme olduğu için damar yapısı ve ton farkları görülebilir."
   },
   {
     question: "Kargo ücreti ne kadar?",
-    answer: "1500 TL ve üzeri siparişlerde kargo ücretsizdir. Daha düşük tutarlarda sabit kargo ücreti 49.90 TL’dir."
+    answer: "Türkiye içi siparişlerde belirli tutarın üzerindeki alışverişlerde kargo ücretsizdir. Altındaki siparişlerde sabit kargo ücreti uygulanır."
   },
   {
-    question: "Ürünümü nasıl iade edebilirim?",
-    answer: "Ürünü teslim aldığınız tarihten itibaren 14 gün içinde iade talebi oluşturabilirsiniz. İade için ürün kullanılmamış ve orijinal ambalajında olmalıdır."
+    question: "Siparişim kargoya verilince nasıl takip edebilirim?",
+    answer: "Siparişiniz kargoya verildiğinde size takip numarası SMS/e-posta yoluyla iletilir."
   },
   {
-    question: "İade ettiğim ürünün ücretini ne zaman alırım?",
-    answer: "İade ettiğiniz ürün depomuza ulaştıktan sonra 3-7 iş günü içinde ücret iadesi gerçekleştirilir."
+    question: "Ürünler kargoda zarar görürse ne yapmalıyım?",
+    answer: "Ürün zarar görürse tutanak tutarak kargoyu teslim almayın ve bizimle iletişime geçin. Hemen değişim sağlanır."
   },
   {
-    question: "Ürün stokta yoksa ne yapmalıyım?",
-    answer: "Stokta olmayan ürünler için 'Stok gelince haber ver' seçeneğini kullanarak bildirim alabilirsiniz."
+    question: "Paketleme ürünün zarar görmesini engelleyecek şekilde mi yapılıyor?",
+    answer: "Evet, tüm ürünler darbelere karşı özel koruma malzemeleriyle paketlenmektedir."
   },
   {
     question: "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
-    answer: "Kredi kartı, banka kartı ve kapıda ödeme seçeneklerini kabul ediyoruz."
+    answer: "Sitemiz üzerinden yaptığınız kredi kartı ile ödeme işlemlerini kabul ediyoruz."
   },
   {
-    question: "Kapıda ödeme var mı?",
-    answer: "Evet, kapıda nakit veya kredi kartı ile ödeme yapabilirsiniz."
+    question: "İade ettiğim ürün için geri ödeme süreci ne kadar sürüyor?",
+    answer: "Ürün bize ulaştıktan sonra 7–10 iş günü içinde ödemeniz iade edilir."
   },
   {
-    question: "B2B kayıt nasıl yapılır?",
-    answer: "B2B kayıt sayfasından şirket bilgilerinizi doldurarak başvurunuzu iletebilirsiniz. Onay süreci 1-2 iş günü sürmektedir."
+    question: "Kişiye özel tasarımlar neden iade edilemiyor?",
+    answer: "Kişiye özel üretilen ürünler yalnızca size özel hazırlandığı için tekrar satışa sunulamaz. Bu nedenle iade kapsamı dışındadır."
   },
   {
-    question: "Hesabımı nasıl silebilirim?",
-    answer: "Hesabınızı silmek için iletişim sayfası üzerinden bize talep gönderebilirsiniz."
+    question: "Ürün hasarlı geldiğinde iade mi değişim mi yapılıyor?",
+    answer: "Ürün elinize ulaştığında kutuda bir hasar var ise kutuyu açmadan önce fotoğraflayıp internet sitesi üzerindeki iletişim numarasından bize ulaşmanız gerekmektedir. Daha sonrasında hasarlı ürünle ilgili iade veya değişim işlemi yapılmaktadır."
   },
   {
-    question: "Ürünüm hasarlı geldi, ne yapmalıyım?",
-    answer: "Lütfen ürünle birlikte gelen kargo tutanağını saklayarak bizimle 48 saat içinde iletişime geçin. Size en kısa sürede yardımcı olacağız."
+    question: "Ahşap ürünler güneş ışığında rengini kaybeder mi?",
+    answer: "Direkt güneş ışığına uzun süre maruz kalırsa renk tonunda değişiklik olabilir. İç mekânda kullanılması önerilir."
+  },
+  {
+    question: "Ürünlerin ömrünü uzatmak için hangi yağ veya bakım ürünlerini öneriyorsunuz?",
+    answer: "Doğal ahşap yağları (örneğin keten yağı, ceviz yağı veya mineral yağ) kullanılabilir."
+  },
+  {
+    question: "Ahşap ürünler dış mekânda kullanılabilir mi?",
+    answer: "Ahşap ürünlerimiz iç mekân kullanımı için uygundur. Dış mekânda kullanmak için ekstra koruyucu işlem uygulanmalıdır."
+  },
+  {
+    question: "Ürünlerin üzerine sıcak tabak veya bardak koymak sorun yaratır mı?",
+    answer: "Direkt sıcak temas ahşap yüzeyde iz bırakabilir. Altlık kullanılması tavsiye edilir."
+  },
+  {
+    question: "Uzun süre kullanılmadığında nasıl saklamalıyım?",
+    answer: "Nemden uzak, kuru ve güneş almayan bir yerde saklamanız en uygun yöntemdir."
   }
 ];
 const Faq = () => {
@@ -59,30 +103,26 @@ const Faq = () => {
     console.log(questionIndex)
   return (
     <div className={`${styles.faq} container`}>
-        <header>
-            <h1>Sıkça Sorulan Sorular</h1>
-        </header>
-        <main>
-            <div className={styles["faq-container"]}>
-                <ul className={styles["faq-list"]}>
-                    {
-                        faqItems.map((item, index) => (
-                            <li className={styles["faq-list-item"]} key={index}>
-                                <div className={styles.question} onClick={() => handleOpenQuestion(index)}>
-                                    <div className={`${styles.direction} ${questionIndex.includes(index) ? styles.show : ""}`}>
-                                        <MdOutlineArrowForwardIos  />
-                                    </div>
-                                    <p>{item.question}</p>
+        <h1>Sıkça Sorulan Sorular</h1>
+        <div className={styles["faq-container"]}>
+            <ul className={styles["faq-list"]}>
+                {
+                    faqItems.map((item, index) => (
+                        <li className={styles["faq-list-item"]} key={index}>
+                            <div className={styles.question} onClick={() => handleOpenQuestion(index)}>
+                                <div className={`${styles.direction} ${questionIndex.includes(index) ? styles.show : ""}`}>
+                                    <MdOutlineArrowForwardIos  />
                                 </div>
-                                <div className={`${styles.answer} ${questionIndex.includes(index) ? styles.show : ""}`}>
-                                    <p>{item.answer}</p>
-                                </div>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
-        </main>
+                                <p>{item.question}</p>
+                            </div>
+                            <div className={`${styles.answer} ${questionIndex.includes(index) ? styles.show : ""}`}>
+                                <p>{item.answer}</p>
+                            </div>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
     </div>
   )
 }

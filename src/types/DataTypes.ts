@@ -29,7 +29,6 @@ export interface DataTypes {
     discount: boolean
     adjustible: boolean
     discountRate: number
-    stock: number
     image: string
     images: {[key: string]: string[]}
     optionValues: {label: string, key: string, values: string[]}[]
