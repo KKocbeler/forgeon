@@ -1,6 +1,5 @@
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import styles from "./ContactPage.module.scss";
-import { navSocialItems } from "../Navbar/NavSocial";
 
 const contactInfo = [
   {
