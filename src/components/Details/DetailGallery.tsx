@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useEffect, useState } from "react";
 import { MdArrowBack, MdArrowDownward, MdArrowForward, MdArrowUpward } from "react-icons/md";
+import Skeleton from "../ui/Skeleton";
 
 interface PropsType {
     selectedTree: string[]
@@ -54,19 +55,29 @@ const DetailGallery = ({selectedTree}: PropsType) => {
                 >
                 {selectedTree.map((img, index) => (
                     <SwiperSlide key={index}>
-                        <img
-                            src={img}
-                            alt={img}
-                            onClick={() => setSelectedImage(index)}
-                            className={`thumb ${selectedImage === index ? 'active' : ''}`}
-                        />
+                        {
+                            selectedTree.length > 0 ? (
+                            <img
+                                src={img}
+                                alt={img}
+                                onClick={() => setSelectedImage(index)}
+                                className={`thumb ${selectedImage === index ? 'active' : ''}`}
+                            />
+                            ) : (
+                                <Skeleton />
+                            )
+                        }
                     </SwiperSlide>
                 ))}
                 </Swiper>
                 <div className="direction" onClick={handlePlusIndex}>{ isMobile ? <MdArrowForward /> : <MdArrowDownward />}</div>
             </div>
             <div className="big-slider">
-                <img src={selectedTree[selectedImage]} alt="Büyük Görsel" />
+                {
+                    selectedTree.length > 0 
+                    ?   <img src={selectedTree[selectedImage]} alt="Büyük Görsel" />
+                    :   <Skeleton />
+                }
             </div>
         </div>
     )

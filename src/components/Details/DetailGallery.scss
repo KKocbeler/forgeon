@@ -29,11 +29,10 @@
         width: 30rem;
 
         .swiper-slide {
+          width: 8rem; height: 8rem;
           img {
             cursor: pointer;
             display: block;
-            width: 8rem;
-            height: 8rem;
             object-fit: cover;
             border: .1rem solid transparent;
             border-radius: .4rem;

@@ -7,6 +7,7 @@ import Loading from '../Pieces/Loading';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../redux/app/store';
 import { IoSparklesSharp } from 'react-icons/io5';
+import Skeleton from '../ui/Skeleton';
 
 interface PropsType {
     filteredProducts: DataTypes[] | []
@@ -49,7 +50,7 @@ const ProductList:React.FC<PropsType> = ({filteredProducts, loading}) => {
                             <div className={styles["card-image"]}>
                                 {
                                     reduxLoading
-                                        ? <div className={styles["image-skeleton"]}></div>
+                                        ? <Skeleton />
                                         : <img src={filteredProduct.image} alt={filteredProduct.name} loading='lazy' />
                                 }
                             </div>
