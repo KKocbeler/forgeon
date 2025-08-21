@@ -1,5 +1,4 @@
 .footer {
-    width: 100%;
     margin-top: auto;
     border-top: .1rem solid var(--primary-color);
 
@@ -9,10 +8,11 @@
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 4rem;
-        padding: 4rem 0;
+        padding: 2rem 0;
 
-        @media (min-width: 576px) {
+        @media (min-width: 768px) {
             flex-direction: row;
+            padding: 4rem 0;
         }
 
         .logo {

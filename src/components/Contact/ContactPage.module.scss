@@ -1,5 +1,5 @@
 .contact-page {
-    margin-top: 10rem;
+    margin-top: 9rem;
     margin-bottom: 5rem;
 
     .form-section {
@@ -202,7 +202,6 @@
         }
     }
 
-    /* Tablet - 768px üstü */
     @media (min-width: 768px) {
         margin-top: 20rem;
         .form-section {
@@ -240,7 +239,6 @@
         }
     }
 
-    /* Küçük laptop - 1024px üstü */
     @media (min-width: 1024px) {
         .form-section {
             grid-template-columns: 1fr 1fr;
